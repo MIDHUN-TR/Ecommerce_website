@@ -58,7 +58,7 @@ const sections = [
         <AuthNavbar />
         {/* main image section */}
         <section className="w-full min-h-[600px] bg-[url('/images/About1.png')] bg-center bg-no-repeat bg-cover">
-          <div className="w-[50%] min-h-[600px] flex flex-col  items-center justify-center">
+          <div className="md:w-[50%] sm:w-[75%] min-h-[600px] flex flex-col  md:items-center md:justify-center sm:justify-center sm:items-center ">
             <h1 className="text-4xl font-bold text-left">Your One-Stop</h1>
             <h1 className="text-4xl font-bold text-left">Online Shopping </h1>
             <h1 className="text-4xl font-bold text-left">Destination </h1>
@@ -74,7 +74,7 @@ const sections = [
           />
         </section>
         {/* text section  */}
-        <div className="w-full flex flex-col justify-center items-center">
+        <div className="w-full flex flex-col justify-center items-center h-fit">
           <div className="md:w-[50%] sm:w-full">
             <h4 className="text-justify font-mono font-semibold text-xl p-3 m-7 ">
               “Day 1” mentality is about approaching every challenge with the
@@ -92,22 +92,22 @@ const sections = [
         {/* card section */}
         <h2 className="text-xl font-semibold md:ms-[10%] sm:ms-4 m-5">Learn more...</h2>
         <div className="flex gap-4 flex-wrap px-2 justify-center">
-
-
-          <div class="max-w-sm sm:flex  md:grid bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
-            <a href="#">
-              <img class="rounded-t-lg sm:" src="https://picsum.photos/seed/mission/400/250" alt="" />
-            </a>
+      {
+        sections.map(item=>(
+            <div class="max-w-sm sm:flex  md:grid bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+            {/* < href="#" className=""> */}
+              <img class="rounded-t-lg sm:flex-1 h-[18rem] " src={item.image} alt=""  />
+            
             <div class="p-5">
               <a href="#">
-                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
+                <h5 class="mb-2 text-2xl sm:flex-1 font-bold tracking-tight text-gray-900 dark:text-white">{item.title}</h5>
               </a>
-              <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+              <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{item.description}</p>
 
             </div>
           </div>
-          
-
+        ))
+      }
         </div>
       </div>
     </>

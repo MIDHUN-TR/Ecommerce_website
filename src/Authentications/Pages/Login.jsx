@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import AuthNavbar from "../Components/AuthNavbar";
+import { Link } from "react-router-dom";
 function Login() {
   const [dark, setDark] = useState("");
   const [show, setShow] = useState(false);
@@ -9,7 +10,7 @@ function Login() {
   };
   return (
     <>
-      <div className="bg-[url('/images/login-background.png')] bg-center  bg-no-repeat min-w-full min-h-screen  ">
+      <div className="bg-[url('/images/login-background.png')] md:bg-center  bg-no-repeat min-w-full min-h-screen  ">
       <AuthNavbar/>
         <div className="min-w-full min-h-screen flex justify-center items-center">
           <div
@@ -152,16 +153,13 @@ function Login() {
 
               {/* <!-- Remember Me & Forgot Password --> */}
               <div class="flex items-center justify-between text-sm mb-6">
-                <label class="flex items-center text-gray-300 space-x-2">
-                  <input
-                    type="checkbox"
-                    class="form-checkbox text-blue-500 bg-[#1F2937]"
-                  />
+                <label class="flex items-center text-black space-x-2">
+                  <input type="checkbox" class="form-checkbox text-blue-500 bg-black"/>
                   <span>Remember me</span>
                 </label>
-                <a href="#" class="text-blue-400 hover:underline">
+                <Link href="" class="text-black hover:underline">
                   Forgot password?
-                </a>
+                </Link>
               </div>
 
               {/* <!-- Sign In Button --> */}
@@ -170,11 +168,11 @@ function Login() {
               </button>
 
               {/* <!-- Sign up link --> */}
-              <p class="mt-6 text-sm text-gray-400 text-center">
+              <p class="mt-6 text-sm text-black text-center">
                 Don’t have an account yet?{" "}
-                <a href="#" class="text-blue-400 hover:underline">
+                <Link href="#" class="text-black hover:underline">
                   Sign up here
-                </a>
+                </Link>
               </p>
             </form>
           </div>
