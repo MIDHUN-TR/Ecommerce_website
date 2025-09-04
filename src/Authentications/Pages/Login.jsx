@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import AuthNavbar from "../Components/AuthNavbar";
 import { Link } from "react-router-dom";
 function Login() {
   const [dark, setDark] = useState("");
@@ -11,6 +10,7 @@ function Login() {
   return (
     <>
       <div className="bg-[url('/images/login-background.png')] md:bg-center  bg-no-repeat min-w-full min-h-screen  ">
+      {/* Logo */}
         <div className="flex items-center">
           <img src={'/images/logo.png'} alt="" className='w-fit h-[50px] bg-transparent mr-1' />
           <h1 className='text-orange-500 font-semibold font-sans text-xl'>NovaCart</h1>
@@ -151,7 +151,7 @@ function Login() {
                   <input type="checkbox" class="form-checkbox text-blue-500 bg-black" />
                   <span>Remember me</span>
                 </label>
-                <Link href="" class="text-black hover:underline">
+                <Link to={'/forget'} class="text-black hover:underline">
                   Forgot password?
                 </Link>
               </div>

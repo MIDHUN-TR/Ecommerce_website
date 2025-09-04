@@ -1,5 +1,5 @@
 import React from "react";
-import AuthNavbar from "../../Authentications/Components/AuthNavbar";
+
 
 function About() {
 const sections = [
@@ -55,7 +55,7 @@ const sections = [
   return (
     <>
       <div className="w-full min-h-[100vh]">
-        <AuthNavbar />
+        
         {/* main image section */}
         <section className="w-full min-h-[600px] bg-[url('/images/About1.png')] bg-center bg-no-repeat bg-cover">
           <div className="md:w-[50%] sm:w-[75%] min-h-[600px] flex flex-col  md:items-center md:justify-center sm:justify-center sm:items-center ">
