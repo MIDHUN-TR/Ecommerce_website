@@ -1,20 +1,20 @@
-import React, { useState } from "react";
-import AuthNavbar from "../Components/AuthNavbar";
-import { Link } from "react-router-dom";
-function Login() {
-  const [dark, setDark] = useState("");
-  const [show, setShow] = useState(false);
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
+
+function Reg() {
+  const [dark, setDark] = useState("")
+  const [show, setShow] = useState(false)
 
   const showing = () => {
     setShow(!show);
   };
   return (
     <>
-      <div className="bg-[url('/images/login-background.png')] md:bg-center  bg-no-repeat min-w-full min-h-screen  ">
-        <div className="flex items-center">
-          <img src={'/images/logo.png'} alt="" className='w-fit h-[50px] bg-transparent mr-1' />
-          <h1 className='text-orange-500 font-semibold font-sans text-xl'>NovaCart</h1>
-        </div>
+      <div className="w-full min-h-screen bg-[url('/images/login-background.png')] md:bg-center overflow-y-auto">
+      <div className="flex  items-center">
+                <img src={'/images/logo.png'} alt=""  className='w-fit h-[50px] bg-transparent mr-3'/>
+                <h1 className='text-orange-500 font-semibold font-sans text-xl'>NovaCart</h1>
+            </div>
         <div className="min-w-full min-h-screen flex justify-center items-center">
           <div
             className={`${dark ? "bg-black" : ""
@@ -92,7 +92,28 @@ function Login() {
                   <path d="M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z" />
                 </svg>
               </div>
+              {/* Username */}
+              <div className="relative mb-6">
+                <input
+                  type="text"
+                  placeholder="Enter your Name"
+                  class="w-full px-4 pr-10 py-3 rounded-lg bg-[#374151] text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#2563EB] focus:border-[#2563EB]"
+                />
+                <svg
+                  class="w-5 h-5 absolute right-3 top-1/2 -translate-y-1/2 text-gray-400"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 2a4 4 0 100 8 4 4 0 000-8zM2 18a8 8 0 1116 0H2z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
 
+              </div>
               {/* <!-- Password Field --> */}
               <div class="relative mb-6">
                 <input
@@ -145,35 +166,35 @@ function Login() {
                 )}
               </div>
 
+
               {/* <!-- Remember Me & Forgot Password --> */}
-              <div class="flex items-center justify-between text-sm mb-6">
-                <label class="flex items-center text-black space-x-2">
+              <div class="flex items-center justify-between text-sm mb-6 ">
+                <label class="flex items-center text-black space-x-2 ">
                   <input type="checkbox" class="form-checkbox text-blue-500 bg-black" />
-                  <span>Remember me</span>
+                  <span className='text-white font-semibold'>Remember me</span>
                 </label>
-                <Link href="" class="text-black hover:underline">
-                  Forgot password?
-                </Link>
+                
               </div>
 
               {/* <!-- Sign In Button --> */}
               <button class="w-full bg-[#2563EB] hover:bg-blue-600 text-white font-semibold py-3 rounded-lg transition duration-200">
-                Sign in to your account
+                Sign up for an account
               </button>
 
               {/* <!-- Sign up link --> */}
               <p class="mt-6 text-sm text-black text-center">
-                Don’t have an account yet?{" "}
-                <Link to={'/reg'} class="text-black hover:underline">
-                  Sign up here
+                Already have an account ?{" "}
+                <Link to={'/'} class="text-black hover:underline">
+                  Sign in here
                 </Link>
               </p>
             </form>
           </div>
         </div>
+
       </div>
     </>
-  );
+  )
 }
 
-export default Login;
+export default Reg
