@@ -29,7 +29,7 @@ function Reg() {
               </h2>
               <div className="w-full flex flex-col gap-3">
                 <button
-                  className={`w-full relative py-3  rounded-lg border ${dark ? "text-white" : "text-dark"
+                  className={`w-full relative py-3 bg-white rounded-lg border ${dark ? "text-white" : "text-dark"
                     } `}
                 >
                   <svg
